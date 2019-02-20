@@ -10,9 +10,20 @@ npm install --save @sugo/cors
 
 ## **getCorsMiddleware**
 
-Builds a middleware function that sets the Cors headers. Can receive an object to define the value of the cors headers
+Builds a middleware function that sets the [CORS](https://developer.mozilla.org/es/docs/Web/HTTP/Access_control_CORS) headers. Can receive an object to define the value of the cors headers
 
 ## **Default options**
+
+```typescript
+export const defaultOptions: ICorsOptions = {
+  'access-control-allow-credentials': true,
+  'access-control-allow-headers': '',
+  'access-control-allow-methods': 'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS',
+  'access-control-allow-origin': '*',
+  'access-control-expose-headers': '',
+  'access-control-max-age': '2592000',
+};
+```
 
 ## **Default middleware**
 

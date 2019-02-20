@@ -16,13 +16,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/pegasi_med/user-api.git"
+    "url": "git+https://github.com:franciscosucre/sugo-cors.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/pegasi_med/user-api/issues"
+    "url": "https://github.com:franciscosucre/sugo-cors.git/issues"
   },
+  "keywords": [
+    "http",
+    "cors",
+    "cross",
+    "origin",
+    "resource",
+    "sharing",
+    "middleware"
+  ],
   "homepage": "https://gitlab.com/pegasi_med/user-api#readme",
   "dependencies": {},
   "devDependencies": {
