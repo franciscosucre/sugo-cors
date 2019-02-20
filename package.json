@@ -1,0 +1,43 @@
+{
+  "name": "@sugo/cors",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/pegasi_med/user-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/pegasi_med/user-api/issues"
+  },
+  "homepage": "https://gitlab.com/pegasi_med/user-api#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@sugo/server": "^1.6.0",
+    "@types/chai": "^4.1.7",
+    "@types/cors": "^2.8.4",
+    "@types/mocha": "^5.2.5",
+    "@types/supertest": "^2.0.7",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "mocha": "^5.2.0",
+    "prettier": "^1.16.3",
+    "supertest": "^3.4.2",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.3.1"
+  }
+}
