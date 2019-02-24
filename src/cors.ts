@@ -14,7 +14,7 @@ export const defaultOptions: ICorsOptions = {
   'access-control-allow-headers': '',
   'access-control-allow-methods': 'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS',
   'access-control-allow-origin': '*',
-  'access-control-expose-headers': '',
+  'access-control-expose-headers': 'authorization',
   'access-control-max-age': '2592000',
 };
 
