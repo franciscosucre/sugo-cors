@@ -11,7 +11,7 @@ export interface ICorsOptions {
 
 export const defaultOptions: ICorsOptions = {
   'access-control-allow-credentials': true,
-  'access-control-allow-headers': '',
+  'access-control-allow-headers': 'origin, content-type, accept, authorization',
   'access-control-allow-methods': 'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS',
   'access-control-allow-origin': '*',
   'access-control-expose-headers': '',
@@ -20,7 +20,7 @@ export const defaultOptions: ICorsOptions = {
 
 export const getMiddleware = (options?: ICorsOptions) => async (req: any, res: any, next?: INextFunction) => {
   options = options ? Object.assign(defaultOptions, options) : defaultOptions;
-  res.setHeader('access-control-allow-credentials', options['access-control-allow-headers']);
+  res.setHeader('access-control-allow-credentials', options['access-control-allow-credentials']);
   res.setHeader('access-control-allow-headers', options['access-control-allow-headers']);
   res.setHeader('access-control-allow-methods', options['access-control-allow-methods']);
   res.setHeader('access-control-allow-origin', options['access-control-allow-origin']);
