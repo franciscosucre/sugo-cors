@@ -14,13 +14,13 @@ export const defaultOptions: ICorsOptions = {
   'access-control-allow-headers': '',
   'access-control-allow-methods': 'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS',
   'access-control-allow-origin': '*',
-  'access-control-expose-headers': 'authorization',
-  'access-control-max-age': '2592000',
+  'access-control-expose-headers': '',
+  'access-control-max-age': '',
 };
 
 export const getCorsMiddleware = (options?: ICorsOptions) => async (req: any, res: any, next?: INextFunction) => {
   options = options ? Object.assign(defaultOptions, options) : defaultOptions;
-  res.setHeader('access-control-allow-credentials', options['access-control-allow-credentials']);
+  res.setHeader('access-control-allow-credentials', req.headers['access-control-request-headers']);
   res.setHeader('access-control-allow-headers', options['access-control-allow-headers']);
   res.setHeader('access-control-allow-methods', options['access-control-allow-methods']);
   res.setHeader('access-control-allow-origin', options['access-control-allow-origin']);
@@ -29,4 +29,4 @@ export const getCorsMiddleware = (options?: ICorsOptions) => async (req: any, re
   return next ? await next() : null;
 };
 
-export default getCorsMiddleware();
+export default getCorsMiddleware;
